@@ -8,16 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = set_post
-      #BEFORE using a serializer:
-<<<<<<< HEAD
-      # render json: @post.to_json(only: [:title, :description, :id],
-      #                           include: [author: { only: [:name]}])
-=======
-      #render json: @post.to_json(only: [:title, :description, :id],
-                                #include: [author: { only: [:name]}])
->>>>>>> e5dd20d77800068513eaa9524434918eb755db5c
-       # AFTER USING OUR SERIALIZER
-       render json: @post, status: 200
+    render json: @post, status: 200
   end
 
   def new
